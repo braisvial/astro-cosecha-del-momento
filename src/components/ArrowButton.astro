@@ -1,0 +1,50 @@
+---
+
+---
+
+<button class="btn-float">&#8679;</button>
+
+<style>
+  .btn-float {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    font-size: 40px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #298f2e;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+</style>
+
+<script type="module">
+  // Funcion para que el boton flotante lleve al usuario a la parte top de la web
+  const btnFloat = document.querySelector(".btn-float");
+  btnFloat.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  // Funcion para mostrar u ocultar el boton flotante
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 130) {
+      btnFloat.classList.add("active");
+    } else {
+      btnFloat.classList.remove("active");
+    }
+  });
+</script>

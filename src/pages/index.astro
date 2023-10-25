@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Content from "../components/Content.astro";
+
+const title = "Cosecha del Momento";
+const description =
+  "Descubre la frescura y sabor inigualable de las frutas y verduras de temporada en Cosecha del Momento. Explora nuestra amplia gama de opciones y disfruta de la calidad de la cosecha del momento en tu mesa.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <Content />
+  <Footer />
+</BaseLayout>

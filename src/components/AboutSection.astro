@@ -1,0 +1,76 @@
+---
+const { titleSection } = Astro.props;
+---
+
+<section id="about-section" class="about-section">
+  <h2>{titleSection}</h2>
+  <div class="about-section-content">
+    <div class="about-section-left">
+      <img src="./assets/img/sandia_about_us.webp" alt="sandia" />
+    </div>
+    <div class="about-section-right">
+      <p>
+        En Cosecha del Momento, somos un grupo de jóvenes programadores que,
+        teniendo un interés común en la tecnología, hemos decidido unirnos para
+        crear esta plataforma donde los usuarios podrán consultar las diferentes
+        frutas y verduras de temporada.
+      </p>
+      <p>
+        Nuestra misión es que mediante esta tecnología, hacer accesible y
+        promover la conexión entre las personas y los alimentos frescos de
+        estación. Nuestro objetivo es proporcionar contenido educativo, práctico
+        y divertido que enriquezca la vida de nuestros visitantes.
+      </p>
+      <p>
+        Gracias por unirte a nosotros en este emocionante viaje. Estamos
+        emocionados de tenerte a bordo. ¡Nos vemos en nuestro sitio web, Cosecha
+        del Momento!
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+    color: var(--font-color);
+
+    & h2 {
+      font-family: var(--font-title);
+      margin: 80px auto;
+    }
+
+    & .about-section-content {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 70px;
+
+      & .about-section-left {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+          width: 400px;
+        }
+      }
+
+      & .about-section-right {
+        display: flex;
+        flex-direction: column;
+
+        & p {
+          font-size: 1.3rem;
+          text-align: center;
+          margin: 20px 40px;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+
+---
+
+<footer>
+  <div class="left-footer">
+    <p>Proyecto realizado por Marta, Octavio y Brais</p>
+    <div class="colaboration-div">
+      <p>
+        Colaboración con
+        <a
+          href="https://www.eoi.es/es/programas/mbas-masters?course_modality_tid[]=18024&gclid=Cj0KCQjwmvSoBhDOARIsAK6aV7jluuNESn-65lyliMvEBjWhzNG0ZpIkh5XrOPKWTl3Y59O50J5wI1IaAoa0EALw_wcB"
+          target="_blank">EOI</a
+        >
+      </p>
+      <div class="logo-eoi">
+        <img src="./assets/img/logo-eoi.webp" alt="eoi" />
+      </div>
+    </div>
+  </div>
+  <div class="right-footer">
+    <img
+      class="logo-footer"
+      src="./assets/icons/logo_principal.svg"
+      alt="logo principal"
+    />
+    <p>© 2023 Cosecha del momento. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    color: var(--font-color);
+
+    & .footer-img {
+      width: 30%;
+    }
+
+    & .left-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 25px;
+
+      & .colaboration-div {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        & a {
+          font-weight: bold;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        & .logo-eoi {
+          height: 30px;
+        }
+      }
+    }
+
+    & .right-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 25px;
+    }
+
+    & .logo-footer {
+      width: 100px;
+      height: 100px;
+    }
+  }
+</style>

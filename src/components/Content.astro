@@ -1,0 +1,133 @@
+---
+import WhatSection from "./WhatSection.astro";
+import AboutSection from "./AboutSection.astro";
+import ArrowButton from "./ArrowButton.astro";
+---
+
+<section id="main-section" class="main-section">
+  <div class="main-container">
+    <a href="https://app.cosechadelmomento.today/">
+      <img
+        class="logo"
+        src="assets/icons/logo_principal.svg"
+        alt="logo principal"
+      />
+    </a>
+    <h3>
+      Descubre y disfruta de la frescura y el sabor de la estación en España.
+      Encuentra frutas y verduras frescas de temporada para mejorar tus
+      elecciones culinarias durante todo el año.
+    </h3>
+  </div>
+</section>
+<ArrowButton />
+
+<div class="container">
+  <WhatSection titleSection="¿QUÉ ES COSECHA DEL MOMENTO?" />
+
+  <hr class="separator" />
+
+  <AboutSection titleSection="SOBRE NOSOTROS" />
+
+  <hr class="separator" />
+
+  <section id="link-section" class="link-section">
+    <div class="link-section-visit">
+      <h3 class="title-link-section">¿QUIERES VISITARNOS?</h3>
+      <h4>Accede a nuestra página web pinchando en el siguiente enlace:</h4>
+    </div>
+    <a href="https://app.cosechadelmomento.today/" class="link-button"
+      >¡Saborea la Temporada!</a
+    >
+  </section>
+</div>
+
+<style>
+  .main-section {
+    background-color: var(--main-color);
+    margin: 0;
+    height: 100vh;
+    background-image: url("/assets/img/landing_background.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .main-container {
+    margin-top: 100px;
+    max-width: 700px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--main-color);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--font-color);
+
+    & h3 {
+      margin: 30px;
+      font-size: 25px;
+    }
+  }
+
+  .logo {
+    --size: 250px;
+
+    animation: pulse 3s infinite;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: var(--font-color);
+
+    & .link-section-visit {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      & .title-link-section {
+        font-size: 44px;
+        margin: 80px auto;
+      }
+
+      & h4 {
+        font-size: 24px;
+        margin: 10px auto 20px;
+      }
+    }
+
+    & .link-button {
+      padding: 3.5%;
+      font-weight: bolder;
+      font-size: 35px;
+      margin: 30px auto 100px;
+      background-color: #4caf50;
+      text-decoration: none;
+      border-radius: 15px;
+      color: #fff;
+      transition: background-color 0.3s;
+      animation: pulse 3s infinite;
+
+      &:hover {
+        background-color: #298f2e;
+      }
+    }
+  }
+</style>

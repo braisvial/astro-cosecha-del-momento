@@ -1,0 +1,117 @@
+---
+
+---
+
+<header>
+  <div class="top-logo">
+    <a class="anchor" href="#main-section">
+      <img
+        src="assets/icons/diseño_logo_encabezado_lateral.svg"
+        alt="logo_cosecha_del_momento"
+      /></a
+    >
+  </div>
+  <div class="anchors">
+    <a class="anchor anchor-section" href="#what-section"
+      >¿Qué características tenemos?</a
+    >
+    <a class="anchor anchor-section" href="#about-section">Sobre nosotros</a>
+    <a class="anchor anchor-link" href="#link-section"
+      >¿Quieres visitar nuestra web?</a
+    >
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: var(--main-color);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & .top-logo {
+      --size: 250px;
+
+      width: var(--size);
+    }
+
+    & .title-logo {
+      display: flex;
+      align-items: center;
+
+      & .top-logo {
+        --size: 120px;
+
+        width: var(--size);
+        height: var(--size);
+      }
+    }
+
+    & > div > h1 {
+      margin: 0;
+      text-shadow: 2px 2px 0 white;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+
+    & .anchors > a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-right: 50px;
+
+      &:hover {
+        text-decoration: underline 2px;
+      }
+    }
+
+    & .anchor-section {
+      color: var(--font-color);
+    }
+
+    & .anchor-link {
+      background-color: var(--secondary-color);
+      padding: 10px 20px;
+      border-radius: 7px;
+      color: white;
+
+      /* cursor: pointer; */
+      transition: background-color 0.4s;
+
+      &:hover {
+        background-color: #298f2e;
+      }
+    }
+  }
+</style>
+
+<script type="module">
+  // Funcion que hace que las anclas tengan un deslizamiento mas suave
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".anchor").forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href").substring(1);
+        const target = document.getElementById(targetId);
+
+        if (target) {
+          const headerHeight = 100; // Ajusta esta altura según la altura de tu encabezado
+          const offset = target.getBoundingClientRect().top - headerHeight;
+
+          window.scrollBy({
+            top: offset,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  });
+</script>
